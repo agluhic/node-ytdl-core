@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> Active development on this repository has been paused since 2023-07-14. While it may still function for some scenarios, please be aware that support is now handled solely by the community, and PRs are currently not merged to the repo. For ongoing updates, we encourage you to explore forks like @distube/ytdl-core. We may revisit development in the future. Thank you for your interest and long-lasting support!  
+> Best Regards TFAN, 2024-08-13
+
 # node-ytdl-core
 
 ![Depfu](https://img.shields.io/depfu/fent/node-ytdl-core)
@@ -39,8 +43,8 @@ Attempts to download a video from the given url. Returns a [readable stream](htt
 * `IPv6Block` - IPv6 block to rotate through, an alternative to using a proxy. [Read more](#how-does-using-an-ipv6-block-help). Defaults to `undefined`.
 
 #### Event: info
-* [`ytdl.videoInfo`](typings/index.d.ts#L194) - Info.
-* [`ytdl.videoFormat`](typings/index.d.ts#L22) - Video Format.
+* [`ytdl.videoInfo`](typings/index.d.ts#L235) - Info.
+* [`ytdl.videoFormat`](typings/index.d.ts#L32) - Video Format.
 
 Emitted when the video's `info` is fetched, along with the chosen format to download.
 
@@ -158,7 +162,7 @@ ytdl cannot download videos that fall into the following
 Generated download links are valid for 6 hours, and may only be downloadable from the same IP address.
 
 ### Ratelimits
-When doing to many requests YouTube might block. This will result in your requests getting denied with HTTP-StatusCode 429. The following Steps might help you:
+When doing too many requests, YouTube might block. This will result in your requests getting denied with HTTP-StatusCode 429. The following Steps might help you:
 * Update ytdl-core to the latest version
 * Use proxies (you can find an example [here](https://github.com/fent/node-ytdl-core/blob/master/example/proxy.js))
 * Extend on the Proxy Idea by rotating (IPv6-)Addresses
